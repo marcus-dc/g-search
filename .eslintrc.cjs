@@ -21,7 +21,7 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ["node_modules/", "prettier.config.mjs"],
+  ignorePatterns: ["node_modules/", "prettier.config.mjs", "dist"],
   rules: {
     "@typescript-eslint/consistent-type-imports": [
       "error",
