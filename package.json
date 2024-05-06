@@ -1,0 +1,15 @@
+{
+  "name": "g-search-2",
+  "version": "0.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "rimraf ./node_modules/*"
+  },
+  "bin": "./index.js",
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.4",
+    "commander": "^12.0.0",
+    "open": "^10.1.0"
+  }
+}
