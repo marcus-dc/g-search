@@ -1,42 +1,38 @@
-const { resolve } = require('node:path');
+const { resolve } = require("node:path");
 
-const project = resolve(process.cwd(), 'tsconfig.json');
+const project = resolve(process.cwd(), "tsconfig.json");
 const extensions = [
-  '@vercel/style-guide/eslint/node',
-  '@vercel/style-guide/eslint/typescript',
+  "@vercel/style-guide/eslint/node",
+  "@vercel/style-guide/eslint/typescript",
 ].map((ext) => require.resolve(ext));
 
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
   extends: extensions,
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     project,
   },
-  globals: {
-    React: true,
-    JSX: true,
-  },
   settings: {
-    'import/resolver': {
+    "import/resolver": {
       typescript: {
         project,
       },
     },
   },
-  ignorePatterns: ['node_modules/', 'prettier.config.mjs'],
+  ignorePatterns: ["node_modules/", "prettier.config.mjs"],
   rules: {
-    '@typescript-eslint/consistent-type-imports': [
-      'error',
-      { prefer: 'type-imports', fixStyle: 'inline-type-imports' },
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      { prefer: "type-imports", fixStyle: "inline-type-imports" },
     ],
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-misused-promises': [
-      'error',
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-misused-promises": [
+      "error",
       { checksVoidReturn: { attributes: false } },
     ],
-    'import/no-default-export': 'off',
-    'import/no-named-as-default': 'off',
+    "import/no-default-export": "off",
+    "import/no-named-as-default": "off",
   },
 };
