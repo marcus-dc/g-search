@@ -7,6 +7,7 @@ program.argument('<string...>', 'string to search').action((str, options) => {
   const query = str.join(' ');
   const url = `https://google.com/search?q=${encodeURIComponent(query)}`;
   console.log(url);
+  console.error(url);
   open(url);
 });
 
