@@ -1,14 +1,14 @@
 {
   "name": "g-search-2",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "test": "rimraf ./node_modules/*"
+    "test": "rimraf ./node_modules/*",
+    "build": "tsup"
   },
-  "bin": "./index.js",
+  "bin": "./dist/index.js",
   "dependencies": {
-    "@radix-ui/react-avatar": "^1.0.4",
     "commander": "^12.0.0",
     "open": "^10.1.0"
   },
@@ -19,6 +19,7 @@
     "@vercel/style-guide": "^6.0.0",
     "eslint": "^8",
     "prettier": "^3.2.5",
+    "tsup": "^8.0.2",
     "typescript": "^5.4.5"
   }
 }
